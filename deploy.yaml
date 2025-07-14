@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: my-deployment
-labels:
-
-app: my-deployment
+  name: project-2-deployment
+  namespace: default
 spec:
-replicas: 2
-selector:
-matchLabels:
-app: my-deployment
-template:
-metadata:
-labels:
-app: my-deployment
-spec:
-containers:
-- name: my-deployment
-image: deekshithamala/project-2
-ports:
-- containerPort: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project-2
+  template:
+    metadata:
+      labels:
+        app: project-2
+    spec:
+      containers:
+      - name: project-2
+        image: deekshithamala/project-2
+        ports:
+        - containerPort: 80
