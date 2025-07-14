@@ -10,5 +10,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30007  # Choose a valid port between 30000–32767
+      nodePort: 30008  # Choose a valid port between 30000–32767
 
